@@ -1,9 +1,7 @@
 class Student:
     courseMarks={}
-    name = ""
-    family = ""
 
-    def _init_(self, name, family):
+    def __init__(self, name, family):
         self.name = name
         self.family = family
 
@@ -19,7 +17,9 @@ class Student:
         avg = temp/count
         print avg
 
-student = Student()
+student = Student("Bob", "McGee")
+print "expect Bob, McGee"
+print "got: %s, %s " %(student.name, student.family)
 student.addCourseMark("CMPUT310", 80)
 student.addCourseMark("STS351", 70)
 student.addCourseMark("CMPUT350", 80)
