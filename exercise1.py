@@ -17,10 +17,11 @@ class Student:
             temp = temp + self.courseMarks[x]
             count = count + 1
         avg = temp/count
-        print avg
+        return avg
 
 student = Student()
 student.addCourseMark("CMPUT310", 80)
 student.addCourseMark("STS351", 70)
 student.addCourseMark("CMPUT350", 80)
-student.average()
+print "Expected 76"
+print "Got: %s" %student.average()
